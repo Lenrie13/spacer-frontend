@@ -61,7 +61,7 @@ api.interceptors.request.use(
   (config) => {
     const accessToken = localStorage.getItem("authToken");
     if (accessToken) {
-      config.headers.Authorization = Bearer ${accessToken};
+      config.headers.Authorization = `Bearer ${accessToken}`;
     }
     return config;
   },
@@ -148,7 +148,7 @@ export default function AdminPanel() {
 
     try {
       if (selectedSpace) {
-        await api.put(/admin/spaces/${selectedSpace.space_id}, spaceData);
+        await api.put(`/admin/spaces/${selectedSpace.space_id}`, spaceData);
       } else {
         await api.post("/admin/spaces", spaceData);
       }
@@ -166,7 +166,7 @@ export default function AdminPanel() {
 
     try {
       if (selectedUser) {
-        await api.put(/admin/users/${selectedUser.user_id}, userData);
+        await api.put(`/admin/users/${selectedUser.user_id}`, userData);
       } else {
         await api.post("/admin/users", userData);
       }
@@ -179,7 +179,7 @@ export default function AdminPanel() {
 
   const handleDeleteSpace = async (spaceId: string) => {
     try {
-      await api.delete(/admin/spaces/${spaceId});
+      await api.delete(`/admin/spaces/${spaceId}`);
       fetchSpaces();
     } catch (error) {
       console.error("Error deleting space:", error);
@@ -188,7 +188,7 @@ export default function AdminPanel() {
 
   const handleDeleteUser = async (userId: string) => {
     try {
-      await api.delete(/admin/users/${userId});
+      await api.delete(`/admin/users/${userId}`);
       fetchUsers();
     } catch (error) {
       console.error("Error deleting user:", error);

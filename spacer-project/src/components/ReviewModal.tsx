@@ -42,11 +42,11 @@ export function ReviewModal({
     try {
       const accessToken = localStorage.getItem("authToken");
       await axios.post(
-        http://127.0.0.1:5000/spaces/${spaceId}/reviews,
+        `http://127.0.0.1:5000/spaces/${spaceId}/reviews`,
         { rating, comment },
         {
           headers: {
-            Authorization: Bearer ${accessToken},
+            Authorization: `Bearer ${accessToken}`,
           },
         },
       );

@@ -36,7 +36,7 @@ export function PaymentModal({
             amount: amount * 100, // Convert to smallest currency unit
             reference,
             currency: "KES",
-            callback_url: ${window.location.origin}/FindYourPlace?reference=${reference}&bookingId=${bookingId},
+            callback_url: `${window.location.origin}/FindYourPlace?reference=${reference}&bookingId=${bookingId}`,
             metadata: {
               bookingId,
             },

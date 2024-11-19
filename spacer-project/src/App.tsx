@@ -33,7 +33,7 @@ const NavigationContent = () => {
   return (
     <nav className="bg-gray-800 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">
+        <Link to="/" className="text-4xl font-bold">
           SPACER
         </Link>
         <ul className="flex space-x-4 items-center">
@@ -51,12 +51,12 @@ const NavigationContent = () => {
             <>
               <li>
                 <Link to="/FindYourPlace" className="hover:text-gray-300">
-                  Find a Place
+                  Find a Space
                 </Link>
               </li>
               <li>
                 <Link to="/AddYourSpace" className="hover:text-gray-300">
-                  List Your Place
+                  List Your Space
                 </Link>
               </li>
               {userType === "Admin" && (
