@@ -91,7 +91,7 @@ export default function SpacerLandingPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h3 className="text-xl font-bold mb-4 text-white">Contact Us</h3>
-            <p className="text-gray-400">123 Main St, Anytown USA</p>
+            <p className="text-gray-400">123 Levey Street. Nairobi, Kenya</p>
             <p className="text-gray-400">info@spacer.com</p>
           </div>
           <div className="space-x-4">

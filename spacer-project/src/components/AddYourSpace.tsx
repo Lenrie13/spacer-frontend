@@ -124,7 +124,7 @@ export default function AddYourSpace() {
       const response = await fetch("http://127.0.0.1:5000/spaces", {
         method: "POST",
         headers: {
-          Authorization: Bearer ${accessToken},
+          Authorization: `Bearer ${accessToken}`,
           // Remove Content-Type header - browser will set it automatically with boundary
         },
         body: formDataToSend,
@@ -133,7 +133,7 @@ export default function AddYourSpace() {
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
         throw new Error(
-          errorData.message || HTTP error! status: ${response.status},
+          errorData.message || `HTTP error! status: ${response.status}`,
         );
       }
 

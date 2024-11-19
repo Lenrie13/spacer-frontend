@@ -138,7 +138,7 @@ export default function AuthScreen() {
           <div
             className="absolute inset-0 bg-cover bg-center opacity-5 z-0 transition-all duration-1000 transform hover:scale-110"
             style={{
-              backgroundImage: url(${heroImages[activeImage]}),
+              backgroundImage: `url(${heroImages[activeImage]})`,
             }}
           />
 

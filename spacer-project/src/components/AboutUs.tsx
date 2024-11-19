@@ -13,17 +13,17 @@ import {
 export default function AboutUs() {
   const teamMembers = [
     {
-      name: "Jane Doe",
+      name: "Hillary Evans",
       role: "CEO & Founder",
       image: "/src/assets/team/person1.webp",
     },
     {
-      name: "John Smith",
+      name: "Natalie Barr",
       role: "CTO",
       image: "/src/assets/team/person2.webp",
     },
     {
-      name: "Emily Brown",
+      name: "Julius Brown",
       role: "Head of Design",
       image: "/src/assets/team/person3.webp",
     },
@@ -133,28 +133,33 @@ export default function AboutUs() {
               </div>
               <div className="flex items-center">
                 <Phone className="mr-2" size={20} />
-                <span>+1 (555) 123-4567</span>
+                <span>+2547 082 97036</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="mr-2" size={20} />
-                <span>123 Main St, Anytown, USA</span>
+                <span>123 Levey Street. Nairobi, Kenya</span>
               </div>
             </div>
             <div className="flex justify-center space-x-6">
               <a
-                href="#"
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-blue-400 transition-colors duration-200 flex items-center"
               >
                 <Facebook size={24} className="mr-2" />
                 <span>Follow us on Facebook</span>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-pink-400 transition-colors duration-200 flex items-center"
               >
                 <Instagram size={24} className="mr-2" />
                 <span>Follow us on Instagram</span>
               </a>
+
             </div>
           </div>
         </section>

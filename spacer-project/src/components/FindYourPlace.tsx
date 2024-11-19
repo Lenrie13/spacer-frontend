@@ -144,10 +144,10 @@ export default function FindYourPlace() {
       });
 
       const response = await fetch(
-        http://127.0.0.1:5000/spaces?${queryParams},
+        `http://127.0.0.1:5000/spaces?${queryParams}`,
         {
           headers: {
-            Authorization: Bearer ${accessToken},
+            Authorization: `Bearer ${accessToken}`,
           },
         },
       );
@@ -209,7 +209,7 @@ export default function FindYourPlace() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: Bearer ${accessToken},
+        Authorization: `Bearer ${accessToken}`,
       },
       body: JSON.stringify({
         space_id: selectedSpace?.space_id,
@@ -260,11 +260,11 @@ export default function FindYourPlace() {
       }
 
       const response = await fetch(
-        http://127.0.0.1:5000/bookings/${bookingId}/verify,
+        `http://127.0.0.1:5000/bookings/${bookingId}/verify`,
         {
           method: "POST",
           headers: {
-            Authorization: Bearer ${accessToken},
+            Authorization: `Bearer ${accessToken}`,
             "Content-Type": "application/json",
           },
         },
@@ -379,7 +379,7 @@ export default function FindYourPlace() {
               <img
                 src={
                   space.images[0]?.url
-                    ? http://localhost:5000${space.images[0]?.url}
+                    ? `http://localhost:5000${space.images[0]?.url}`
                     : "/placeholder.svg"
                 }
                 alt={space.name}
@@ -499,7 +499,7 @@ export default function FindYourPlace() {
                 <PaymentModal
                   amount={selectedSpace?.hourly_rate || 0}
                   email="user@example.com"
-                  reference={ref_${new Date().getTime()}}
+                  reference={`ref_${new Date().getTime()}`}
                   onSuccess={handlePaymentSuccess}
                   onClose={handlePaymentClose}
                   isProcessing={isProcessingPayment}

@@ -42,7 +42,7 @@ export default function ProfileComponent() {
       const response = await fetch("http://127.0.0.1:5000/profile", {
         method: "GET",
         headers: {
-          Authorization: Bearer ${accessToken},
+          Authorization: `Bearer ${accessToken}`,
           "Content-Type": "application/json",
         },
       });
@@ -53,7 +53,7 @@ export default function ProfileComponent() {
 
       const data = await response.json();
       setProfile(data);
-      setPreviewUrl(http://localhost:5000${data.profile_picture});
+      setPreviewUrl(`http://localhost:5000${data.profile_picture}`);
       setIsLoading(false);
     } catch (err) {
       setError("Failed to load profile data. Please try again later.");
@@ -83,7 +83,7 @@ export default function ProfileComponent() {
       const response = await fetch("http://127.0.0.1:5000/profile", {
         method: "PUT",
         headers: {
-          Authorization: Bearer ${accessToken},
+          Authorization: `Bearer ${accessToken}`,
         },
         body: formData,
       });
