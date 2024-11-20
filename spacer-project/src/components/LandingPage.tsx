@@ -62,7 +62,7 @@ export default function SpacerLandingPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h3 className="text-xl font-bold mb-2 text-gray-800">
-              Find a Place
+              Find a Space
             </h3>
             <p className="text-gray-600">
               Discover spaces for hourly or daily rentals in your area.
@@ -70,7 +70,7 @@ export default function SpacerLandingPage() {
           </div>
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h3 className="text-xl font-bold mb-2 text-gray-800">
-              List Your Place
+              List Your Space
             </h3>
             <p className="text-gray-600">
               Earn money by listing your space for others to rent.

@@ -125,7 +125,7 @@ export default function AddYourSpace() {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accessToken}`,
-          // Remove Content-Type header - browser will set it automatically with boundary
+          
         },
         body: formDataToSend,
       });
