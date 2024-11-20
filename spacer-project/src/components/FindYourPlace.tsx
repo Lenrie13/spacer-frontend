@@ -379,7 +379,7 @@ export default function FindYourPlace() {
               <img
                 src={
                   space.images[0]?.url
-                    ? `http://localhost:5000${space.images[0]?.url}`
+                    ? space.images[0]?.url
                     : "/placeholder.svg"
                 }
                 alt={space.name}
