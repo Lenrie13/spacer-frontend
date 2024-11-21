@@ -140,7 +140,7 @@ export default function FindYourPlace() {
     try {
       const queryParams = new URLSearchParams({
         page: currentPage.toString(),
-        per_page: "6",
+        per_page: "48",
       });
 
       const response = await fetch(
